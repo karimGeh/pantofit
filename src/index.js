@@ -3,8 +3,16 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 import { Provider } from "react-redux";
-import store from "./Store";
+import store from "./db";
 // import reportWebVitals from './reportWebVitals';
+
+function handleChange() {
+	let state = store.getState();
+	localStorage.setItem("state", JSON.stringify(state));
+	console.log(state);
+}
+
+store.subscribe(handleChange);
 
 ReactDOM.render(
 	<React.StrictMode>
