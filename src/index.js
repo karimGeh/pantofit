@@ -14,6 +14,8 @@ function handleChange() {
 
 store.subscribe(handleChange);
 
+// process.env.DEV_MODE = true;
+
 ReactDOM.render(
 	<React.StrictMode>
 		<Provider store={store}>

@@ -1,9 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import { Login, RecentClients, EditeProfile, Bills } from "./views";
+import Default from "./layouts";
 
 import Admin from "./controllers/Admin";
 import LogedOut from "./controllers/LogedOut";
+
+import "./static/css/index.scss";
 
 const App = () => {
 	return (
@@ -16,17 +20,23 @@ const App = () => {
 				</Route>
 				<Route path='/facture'>
 					<Admin>
-						<Bills />
+						<Default>
+							<Bills />
+						</Default>
 					</Admin>
 				</Route>
 				<Route path='/profile'>
 					<Admin>
-						<EditeProfile />
+						<Default>
+							<EditeProfile />
+						</Default>
 					</Admin>
 				</Route>
 				<Route path='/'>
 					<Admin>
-						<RecentClients />
+						<Default>
+							<RecentClients />
+						</Default>
 					</Admin>
 				</Route>
 			</Switch>
