@@ -12,7 +12,7 @@ const Login = () => {
 
 	const handleLogin = (e) => {
 		login(email, password).then((data) => {
-			console.log(data);
+			// console.log(data);
 			if (data) {
 				dispatch(logIn(data));
 			}

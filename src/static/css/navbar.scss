@@ -114,6 +114,10 @@ $dims: 60px;
 		.profile {
 			opacity: 1;
 			width: 100%;
+			img {
+				width: 40%;
+				object-fit: contain;
+			}
 		}
 
 		.nav-container {

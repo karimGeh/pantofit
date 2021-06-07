@@ -1,0 +1,17 @@
+.recentContainer {
+	// border: 3px solid red;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: var(--darkGray);
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	padding: 1rem;
+
+	overflow: hidden;
+	overflow-y: scroll;
+}
