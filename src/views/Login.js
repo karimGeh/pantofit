@@ -4,6 +4,8 @@ import { login } from "../api/authentication";
 import { logIn } from "../db/actions";
 
 import "../static/css/login.scss";
+import Logo from "../static/img/logo.5x.png";
+import userImage from "../static/img/city.png";
 
 const Login = () => {
 	let dispatch = useDispatch();
@@ -11,7 +13,7 @@ const Login = () => {
 	const [password, setPassword] = useState("");
 
 	const handleLogin = (e) => {
-		login(email, password).then((data) => {
+		login(email, password, userImage).then((data) => {
 			// console.log(data);
 			if (data) {
 				dispatch(logIn(data));
@@ -22,7 +24,7 @@ const Login = () => {
 
 	return (
 		<div className='login-container'>
-			<img src='https://via.placeholder.com/150' alt='logo' />
+			<img src={Logo} alt='logo' />
 			<input
 				className='login-input'
 				type='text'

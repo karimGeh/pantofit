@@ -1,5 +1,7 @@
 import React from "react";
+
 import "../static/css/userCard.scss";
+
 const UserCard = ({ client }) => {
 	const { name, img, soldLeft, idOfWorkout, scanedAt } = client;
 

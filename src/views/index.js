@@ -1,6 +1,6 @@
 import Login from "./Login";
 import Bills from "./Bills";
-import EditeProfile from "./EditeProfile";
+import EditProfile from "./EditProfile";
 import RecentClients from "./RecentClients";
 
-export { Login, Bills, EditeProfile, RecentClients };
+export { Login, Bills, EditProfile, RecentClients };

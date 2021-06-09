@@ -15,3 +15,22 @@ export const logOut = () => {
 		payload: {},
 	};
 };
+
+export const changeUser = (key, value) => {
+	return {
+		type: types.UPDATE_USER,
+		payload: {
+			key,
+			value,
+		},
+	};
+};
+
+export const resetImage = (image) => {
+	return {
+		type: types.RESET_IMAGE,
+		payload: {
+			image,
+		},
+	};
+};

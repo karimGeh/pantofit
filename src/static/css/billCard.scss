@@ -1,0 +1,14 @@
+.billCard {
+	color: var(--pink);
+	background-color: var(--lightGray);
+	padding: 1rem;
+	border-radius: 10px;
+
+	td {
+		flex: 1;
+	}
+	a {
+		text-decoration: underline;
+		color: var(--pink);
+	}
+}

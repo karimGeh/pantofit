@@ -7,7 +7,7 @@ import { logOut } from "../db/actions";
 import "../static/css/navbar.scss";
 
 const NavBar = () => {
-	const { name, code } = useSelector((state) => state.user);
+	const { name, code, location, image } = useSelector((state) => state.user);
 	const { path } = useRouteMatch();
 	// console.log(state);
 	// const { name, code } = state;
@@ -15,9 +15,10 @@ const NavBar = () => {
 	return (
 		<div className='wrapper'>
 			<div className='profile'>
-				<img src='https://via.placeholder.com/150' alt='logo' />
+				<img src={image} alt='logo' />
 				<h2>{name}</h2>
 				<h4>#{code}</h4>
+				<h5>{location}</h5>
 			</div>
 			<div className='nav-container'>
 				<ul>

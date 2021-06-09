@@ -9,7 +9,7 @@ import store from "./db";
 function handleChange() {
 	let state = store.getState();
 	localStorage.setItem("state", JSON.stringify(state));
-	console.log(state);
+	// console.log(state);
 }
 
 store.subscribe(handleChange);

@@ -23,6 +23,23 @@ const reducer = (state = defaultState, action) => {
 				user: undefined,
 				isLogged: false,
 			};
+		case types.UPDATE_USER:
+			const { key, value } = action.payload;
+			return {
+				...state,
+				user: {
+					...state.user,
+					[key]: value,
+				},
+			};
+		case types.RESET_IMAGE:
+			return {
+				...state,
+				user: {
+					...state.user,
+					image: action.payload.image,
+				},
+			};
 		default:
 			return state;
 	}

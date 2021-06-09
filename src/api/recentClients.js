@@ -1,8 +1,6 @@
-import { API_URL, LOCAL_API_URL } from "./index";
+import { URL } from "./index";
 
-const URL = process.env.NODE_ENV === "development" ? LOCAL_API_URL : API_URL;
-
-let listOfRecentClients = [
+const listOfRecentClients = [
 	{
 		name: "baderddine Grina",
 		img: "https://via.placeholder.com/150",
